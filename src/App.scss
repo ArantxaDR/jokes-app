@@ -1,0 +1,11 @@
+@import "src/shared/styles/_colors.scss";
+
+.app-container {
+	height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+.main-container {
+	background-color: $color-primary;
+}

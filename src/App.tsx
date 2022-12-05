@@ -1,22 +1,18 @@
 import React from 'react';
-import './App.css';
+import "./App.scss";
+import { Footer } from './components/footer/Footer';
+import { Header } from './components/header/Header';
+import { JokesDisplay } from './components/jokes-display/JokesDisplay';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-
-        <p>          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-container'>
+      <Header />
+      <main className='main-container'>
+        <p>Click the random joke button to get a joke and the punchline button to start laughing</p>
+        <JokesDisplay />
+      </main>
+      <Footer />
     </div>
   );
 }
