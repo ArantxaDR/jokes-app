@@ -6,14 +6,14 @@ import { JokesDisplay } from './components/jokes-display/JokesDisplay';
 
 function App() {
   return (
-    <div className='app-container'>
+    <>
       <Header />
       <main className='main-container'>
         <p>Click the random joke button to get a joke and the punchline button to start laughing</p>
         <JokesDisplay />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

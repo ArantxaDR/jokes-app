@@ -1,11 +1,12 @@
-import React from 'react'
+import axios from 'axios';
+import { JokeInterface } from '../interfaces/dataInterface'
 
 
-class DataService {
-	fetchJokes<T>(jokesURL: string): Promise<T> {
-		return fetch(jokesURL).then(response => {
-			return response.json()
-		})
-	}
+export const getJokes = () => {
+	const getAllJokes = axios.get<JokeInterface[]>("http://localhost:5000/jokes")
+		.then((response) => response.data);
+
+	return getAllJokes;
+
 }
-export const dataService = new DataService();
+

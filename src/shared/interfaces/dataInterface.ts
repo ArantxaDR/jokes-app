@@ -5,7 +5,7 @@ export interface JokeInterface {
 	punchline: string
 }
 
-// export interface JokeListInterface {
+export interface JokeListInterface {
 
-// 	jokes: JokeInterface[]
-// }
+	jokes: JokeInterface[]
+}

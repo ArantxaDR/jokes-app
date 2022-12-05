@@ -6,7 +6,7 @@ interface Props {
 	handleAction?: () => void;
 	name: string;
 	disabled?: boolean;
-	title: string
+	title: string;
 }
 
 export const Button = (props: Props) => {
