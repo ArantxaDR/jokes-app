@@ -4,3 +4,8 @@ export interface JokeInterface {
 	setup: string,
 	punchline: string
 }
+
+// export interface JokeListInterface {
+
+// 	jokes: JokeInterface[]
+// }
