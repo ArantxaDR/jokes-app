@@ -1,5 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Roboto:ital,wght@1,100;1,300&display=swap');
+@import "../../shared/styles/colors";
+
 .header-container {
 	position: sticky;
-	background: linear-gradient(90deg, rgba(68, 10, 119, 1) 0%, rgba(84, 9, 121, 1) 26%, rgba(255, 0, 241, 1) 100%);
+	background: $color-secondary;
 	text-align: center;
+	padding: 1rem;
+	background-color: #05333a;
+	background-image: linear-gradient(118deg, #05333a 0%, #b2a154 100%);
+}
+
+.header-title,
+.header-subtitle {
+	color: $color-terciary;
+}
+
+.header-title {
+	font-family: 'Archivo', sans-serif;
+	font-weight: bold;
+}
+
+.header-subtitle {
+	margin-top: 0.5rem;
+	font-family: 'Roboto', sans-serif;
 }

@@ -40,11 +40,14 @@ export const JokesDisplay = () => {
 		<>
 			<div className='jokes-container'>
 				{loading ? (<img className='loading' src={loader} alt='loader' />) :
-					<h2>{joke && joke.setup}</h2>}
-				<Button name="get-punchline" title='Get punchline' handleAction={handlePunchline} />
-				{punchline ? (<h1>{joke && joke.punchline}</h1>) : ""}
+					<h2 className='jokes-container__text setup'>{joke && joke.setup}</h2>}
+				{punchline ? (<h3 className='jokes-container__text punchline'>{joke && joke.punchline}</h3>) : ""}
 			</div>
-			<Button name="get-joke" title='Get random joke' handleAction={getRandomJoke} />
+			<div className='jokes-container__buttons'>
+				<Button name="get-joke" title='Get random joke' handleAction={getRandomJoke} />
+				<Button name="get-punchline" title='Get punchline' handleAction={handlePunchline} />
+			</div>
+
 		</>
 	)
 }

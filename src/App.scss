@@ -1,1 +1,13 @@
 @import "src/shared/styles/_colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Roboto:ital,wght@1,100;1,300&display=swap');
+
+.main-container {
+
+
+	&__text {
+		padding: 1rem;
+		text-align: center;
+		color: $color-terciary;
+		font-family: 'Archivo', sans-serif;
+	}
+}

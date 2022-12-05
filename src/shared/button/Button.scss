@@ -1,4 +1,5 @@
 @import "../styles/_colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Roboto:ital,wght@1,100;1,300&display=swap');
 
 .button {
 	min-width: 130px;
@@ -6,12 +7,13 @@
 	background-color: $color-secondary;
 	border: 0;
 	border-radius: 10px;
-	color: $color-text;
-	box-shadow: 0px 0px 0px rgba(195, 115, 236, 0.4);
+	color: $color-terciary;
+	box-shadow: 0px 0px 0px $color-secondary;
 	transition: all 0.3s ease;
+	font-family: 'Archivo', sans-serif;
 }
 
 .button:hover {
-	box-shadow: -5px 5px 0px rgba(211, 69, 239, 0.4);
+	box-shadow: -5px 5px 0px $color-secondary;
 	transform: translateY(-5px);
 }

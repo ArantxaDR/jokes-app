@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <main className='main-container'>
-        <p>Click the random joke button to get a joke and the punchline button to start laughing</p>
+        <h3 className='main-container__text'>Click the "Get random joke" to get a joke and the "Get punchline" button to start laughing.</h3>
         <JokesDisplay />
       </main>
       <Footer />

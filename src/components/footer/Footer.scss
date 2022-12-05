@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Roboto:ital,wght@1,100;1,300&display=swap');
+@import "../../shared/styles/colors";
+
 .footer-container {
-	position: sticky;
+	position: absolute;
+	right: 0;
 	bottom: 0;
-	background: linear-gradient(90deg, rgba(68, 10, 119, 1) 0%, rgba(84, 9, 121, 1) 26%, rgba(255, 0, 241, 1) 100%);
-	text-align: center;
+	left: 0;
+	padding: 0.5rem;
+	background-color: #05333a;
+	background-image: linear-gradient(347deg, #05333a 0%, #b2a154 100%);
+
+	&__text {
+		text-align: center;
+		padding: 1rem;
+		color: $color-terciary;
+		font-family: 'Roboto', sans-serif;
+	}
 }
