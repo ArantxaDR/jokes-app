@@ -17,7 +17,7 @@ First clone the repository in your computer:
 # npm fake-api
 ```
 
-- To start the front project and test it in development use the URL 'http://localhost:3000/'
+- To start the front project and test it use the URL 'http://localhost:3000/'
 ```
 # npm start
 ```
