@@ -1,17 +1,56 @@
-# TO-DO
+# Random jokes :smile:
 
-[ ] Read and display one joke at a time
+Front-end tecnical challenge for Accenture.
+Easy app to get random jokes and their punchlines with a couple of buttons.
 
-[ ] Reveal property "setup" by clicking the page
+## :computer: Start the project:
 
-[ ] Reveal the punchline by clicking again
+First clone the repository in your computer:
 
-[ ] Click again for another joke to show
+- To install the dependencies 
+```
+# npm install
+```
 
-[ ] Add documentation
+- To start the json server
+```
+# npm fake-api
+```
 
-resources:
+- To start the front project and test it in development use the URL 'http://localhost:3000/'
+```
+# npm start
+```
 
-loader:
-- https://github.com/SamHerbert/SVG-Loaders/blob/master/svg-loaders/three-dots.svg?short_path=6f7b43a
-- https://www.npmjs.com/package/json-server
+### :wrench: Tecnologías
+
+Core: 
+- [React & Typescript](https://create-react-app.dev/docs/adding-typescript/)
+- [Sass](https://sass-lang.com/)
+
+Api comunication:
+- [Axios](https://axios-http.com/)
+
+Dependencies:
+- [jon-server](https://www.npmjs.com/package/json-server)
+
+## :open_file_folder: Structure:
+
+- Assets:
+    - images.
+- Components: 
+    - Footer
+    - Header
+    - JokesDisplay:
+- Shared:
+	- Button
+	- Interfaces
+	- Services
+	- Styles
+-Utils
+
+## :notebook_with_decorative_cover: Wiki:
+
+To make the loader I used this [repository](https://github.com/SamHerbert/SVG-Loaders/blob/master/svg-loaders/three-dots.svg?short_path=6f7b43a) whit easy options to use in your projects.
+
+I've chosen to work with json-server to mock an API using the json data because is a simple way to fake a backend.
