@@ -37,16 +37,16 @@ Dependencies:
 ## :open_file_folder: Structure:
 
 - Assets:
-    - images.
+|---- Images
 - Components: 
-    - Footer
-    - Header
-    - JokesDisplay:
+|---- Footer
+|---- Header
+|---- JokesDisplay
 - Shared:
-	- Button
-	- Interfaces
-	- Services
-	- Styles
+|---- Button
+|---- Interfaces
+|---- Services
+|---- Styles.
 -Utils
 
 ## :notebook_with_decorative_cover: Wiki:
