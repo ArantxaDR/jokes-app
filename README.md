@@ -35,20 +35,22 @@ Dependencies:
 - [jon-server](https://www.npmjs.com/package/json-server)
 
 ## :open_file_folder: Structure:
-
-- Assets:
-|---- Images
-- Components: 
-|---- Footer
-|---- Header
-|---- JokesDisplay
-- Shared:
-|---- Button
-|---- Interfaces
-|---- Services
-|---- Styles.
--Utils
-
+```
+src
+ ├─ assets
+ |  
+ ├─ components
+ |  └─ footer
+ |  └─ header
+ |  └─ jokesdisplay
+ |─ shared
+ |  └─button
+ |  └─interfaces
+ |  └─services
+ |  └─stylees
+ └─ utils
+   
+```
 ## :notebook_with_decorative_cover: Wiki:
 
 To make the loader I used this [repository](https://github.com/SamHerbert/SVG-Loaders/blob/master/svg-loaders/three-dots.svg?short_path=6f7b43a) whit easy options to use in your projects.
