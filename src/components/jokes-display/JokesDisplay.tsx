@@ -18,7 +18,7 @@ export const JokesDisplay = () => {
 		getJokes().then((response) => {
 			setJokes(response);
 		}).catch(error => {
-			alert(error);
+			alert("There seems to have no jokes left. Try again later");
 		})
 		setLoading(false);
 	}, [])
