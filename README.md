@@ -1,6 +1,6 @@
 # Random jokes :smile:
 
-Front-end tecnical challenge for Accenture. Easy app to get random jokes and their punchlines.
+Easy app to get random jokes and their punchlines.
 
 #### How it works:
 First, press the "get random joke" button to show the body of the joke. Then press the "get punchline" to show the punchline 
