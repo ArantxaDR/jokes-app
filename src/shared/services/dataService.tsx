@@ -3,8 +3,8 @@ import { JokeInterface } from '../interfaces/dataInterface'
 
 
 export const getJokes = () => {
-	const getAllJokes = axios.get<JokeInterface[]>("http://localhost:5000/jokes")
-		.then((response) => response.data);
+	const getAllJokes = axios.get<JokeInterface[]>("https://v2.jokeapi.dev/joke/Any?blacklistFlags=religious,racist,sexist&type=twopart")
+		.then((response) =>response.data);
 
 	return getAllJokes;
 
