@@ -33,8 +33,6 @@ Core:
 Api comunication:
 - [Axios](https://axios-http.com/)
 
-Dependencies:
-- [jon-server](https://www.npmjs.com/package/json-server)
 
 ## :open_file_folder: Structure:
 ```
