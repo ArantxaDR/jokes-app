@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/jokes-app/static/css/main.eb2733c9.css",
-    "main.js": "/jokes-app/static/js/main.0d165f57.js",
+    "main.css": "/jokes-app/static/css/main.37cce4b7.css",
+    "main.js": "/jokes-app/static/js/main.fee01870.js",
     "static/js/787.3db2aa79.chunk.js": "/jokes-app/static/js/787.3db2aa79.chunk.js",
     "static/media/loader.svg": "/jokes-app/static/media/loader.9d91218a60f9d8539893b2139950f2a9.svg",
     "index.html": "/jokes-app/index.html",
-    "main.eb2733c9.css.map": "/jokes-app/static/css/main.eb2733c9.css.map",
-    "main.0d165f57.js.map": "/jokes-app/static/js/main.0d165f57.js.map",
+    "main.37cce4b7.css.map": "/jokes-app/static/css/main.37cce4b7.css.map",
+    "main.fee01870.js.map": "/jokes-app/static/js/main.fee01870.js.map",
     "787.3db2aa79.chunk.js.map": "/jokes-app/static/js/787.3db2aa79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb2733c9.css",
-    "static/js/main.0d165f57.js"
+    "static/css/main.37cce4b7.css",
+    "static/js/main.fee01870.js"
   ]
 }
