@@ -14,11 +14,6 @@ First clone the repository in your computer:
 # npm install
 ```
 
-- To start the json server
-```
-# npm fake-api
-```
-
 - To start the front project and test it use the URL 'http://localhost:3000/'
 ```
 # npm start
@@ -33,8 +28,6 @@ Core:
 Api comunication:
 - [Axios](https://axios-http.com/)
 
-Dependencies:
-- [jon-server](https://www.npmjs.com/package/json-server)
 
 ## :open_file_folder: Structure:
 ```
