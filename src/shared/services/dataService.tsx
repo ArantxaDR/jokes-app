@@ -1,12 +1,15 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { JokeInterface } from '../interfaces/dataInterface'
 
 
-export const getJokes = () => {
-	const getAllJokes = axios.get<JokeInterface[]>("https://v2.jokeapi.dev/joke/Any?blacklistFlags=religious,racist,sexist&type=twopart")
-		.then((response) =>response.data);
-
-	return getAllJokes;
-
-}
-
+export const getRandomJokes = async (count: number = 1): Promise<JokeInterface[]> => {
+  try {
+    const response: AxiosResponse<JokeInterface[]> = await axios.get(
+      `https://official-joke-api.appspot.com/jokes/random/${count}`
+    );
+    return response.data;
+  } catch (error) {
+    console.error('Error getting jokes:', error);
+    throw new Error('The jokes could not be obtained. Please try again later.');
+  }
+};

@@ -1,55 +1,80 @@
-import React, { useEffect, useState } from 'react';
-
-import { Button } from '../../shared/button/Button';
-import { JokeInterface } from '../../shared/interfaces/dataInterface';
-
-
+import { useEffect, useState } from "react";
+import { Button } from "../../shared/button/Button";
+import { JokeInterface } from "../../shared/interfaces/dataInterface";
 import "./JokesDisplay.scss";
 import loader from "../../assets/images/loader.svg";
-import { getJokes } from '../../shared/services/dataService';
-
+import { getRandomJokes } from "../../shared/services/dataService";
 
 export const JokesDisplay = () => {
-	const [jokes, setJokes] = useState<JokeInterface[]>([]);
-	const [joke, setJoke] = useState<JokeInterface>();
-	const [loading, setLoading] = useState(true);
-	const [punchline, setPunchline] = useState(false);
-	const [error, setError] = useState<string>("");
-	useEffect(() => {
-		getJokes().then((response) => {
-			setJokes(response);
-			setLoading(false);
-		}).catch((error) => {
-			setError("There seems to be no jokes left. Try again later");
-		})
-	}, [])
+  // Estados para almacenar chistes, chiste actual, estado de carga, punchline y errores
+  const [jokes, setJokes] = useState<JokeInterface[]>([]);
+  const [joke, setJoke] = useState<JokeInterface | null>(null); // Permitir null
+  const [loading, setLoading] = useState<boolean>(true);
+  const [punchline, setPunchline] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
 
-	const handlePunchline = () => {
-		setPunchline(true)
-	}
+  useEffect(() => {
+    const fetchJokes = async () => {
+      setLoading(true);
+      setError("");
 
-	const getRandomJoke = () => {
-		let min = 0;
-		let max = jokes.length;
-		let indexJoke = Math.floor(Math.random() * (max - min + 1)) + min;
+      try {
+        const response = await getRandomJokes(10);
+        setJokes(response);
+        getRandomJoke(response);
+      } catch (error) {
+        setError("There seems to be no jokes left. Try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-		setJoke(jokes[indexJoke]);
-		setPunchline(false);
-	}
+    fetchJokes();
+  }, []);
 
-	return (
-		error ? <h3 className='jokes-container__text'>{error}</h3> :(<>
-			<div className='jokes-container'>
-				{loading ? (<img className='loading' src={loader} alt='loader' />) :
-					<h2 className='jokes-container__text setup'>{joke && joke.setup}</h2>}
-				{punchline ? (<h3 className='jokes-container__text punchline'>{joke && joke.delivery}</h3>) : ""}
-			</div>
-			<div className='jokes-container__buttons'>
-				<Button name="get-joke" title='Get random joke' handleAction={getRandomJoke} />
-				<Button name="get-punchline" title='Get punchline' handleAction={handlePunchline} />
-			</div>
+  const handlePunchline = () => {
+    setPunchline(true);
+  };
 
-		</>)
-		
-	)
-}
+  const getRandomJoke = (jokesList: JokeInterface[] = jokes) => {
+    if (jokesList.length === 0) return;
+
+    const min = 0;
+    const max = jokesList.length - 1;
+    const indexJoke = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    setJoke(jokesList[indexJoke]);
+    setPunchline(false);
+  };
+
+  return error ? (
+    <h3 className="jokes-container__text">{error}</h3>
+  ) : (
+    <>
+      <div className="jokes-container">
+        {loading ? (
+          <img className="loading" src={loader} alt="loader" />
+        ) : (
+          <h2 className="jokes-container__text setup">{joke?.setup}</h2>
+        )}
+        {punchline && joke && (
+          <h3 className="jokes-container__text punchline">{joke.punchline}</h3>
+        )}
+      </div>
+      <div className="jokes-container__buttons">
+        <div className='jokes-container__buttons-display'>
+          <Button
+            name="get-joke"
+            title="Get random joke"
+            handleAction={() => getRandomJoke(jokes)}
+          />
+          <Button
+            name="get-punchline"
+            title="Get punchline"
+            handleAction={handlePunchline}
+          />
+        </div>
+      </div>
+    </>
+  );
+};
