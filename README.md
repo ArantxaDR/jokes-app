@@ -49,4 +49,3 @@ src
 
 To make the loader I used this [repository](https://github.com/SamHerbert/SVG-Loaders/blob/master/svg-loaders/three-dots.svg?short_path=6f7b43a) whit easy options to use in your projects.
 
-I've chosen to work with json-server to mock an API using the json data because is a simple way to fake a backend.
